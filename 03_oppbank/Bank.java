@@ -18,7 +18,7 @@ abstract class Account {
 
     public void transferTo(Account other, double amount) {
         System.out.println("[transferTo] sending " + amount + " to another account");
-        this.withdraw(amount);   // polymorphic: calls the SUBCLASS withdraw
+        this.withdraw(amount);   
         other.deposit(amount);
     }
 }
@@ -66,7 +66,7 @@ public class Bank {
         saving.getBalance();
 
         System.out.println("\n=== Test 3: transfer (polymorphic withdraw) ===");
-        normal.transferTo(saving, 200);   // normal has 700, sends 200
+        normal.transferTo(saving, 200);   
         normal.getBalance();
         saving.getBalance();
 
